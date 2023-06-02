@@ -39,7 +39,7 @@
 
 ##### 使用valgrind调试，显示出详细的内存泄露信息，以及错误发生在哪一行:
 > valgrind --tool=memcheck --leak-check=full ./a.out
-##### 如果还需要定位到导致全局静态区内存still reachable的问题:
+##### 如果还需要定位到导致全局静态区内存still reachable的问题发生在哪一行:
 > valgrind --tool=memcheck --leak-check=full --show-reachable=yes ./a.out
 ##### 为了方便日常使用，可以在home路径下修改.bashrc配置文件，文件末尾添加:
 > alias memcheck='valgrind --tool=memcheck --leak-check=full'
